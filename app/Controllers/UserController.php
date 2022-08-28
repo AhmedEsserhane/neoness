@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Models\UsersModel;
 
-class Users extends BaseController
+class UserController extends BaseController
 {
     public function connexion()
     {

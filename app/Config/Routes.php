@@ -39,12 +39,12 @@ $routes->set404Override();
 
 //Page Dynamique
 //Users page
-$routes->match(['post','get'],'connexion', 'Users::connexion', ['filter' => 'noauth']);
-$routes->get('logout', 'Users::logout');
-$routes->match(['post','get'],'inscription', 'Users::inscription', ['filter' => 'noauth']);
-$routes->match(['post','get'],'profile', 'Users::profile', ['filter' => 'auth']);
-$routes->match(['post','get'],'password', 'Users::password', ['filter' => 'auth']);
-$routes->get('dashboard', 'Users::dashboard', ['filter' => 'auth']);
+$routes->match(['post','get'],'connexion', 'UserController::connexion', ['filter' => 'noauth']);
+$routes->get('logout', 'UserController::logout');
+$routes->match(['post','get'],'inscription', 'UserController::inscription', ['filter' => 'noauth']);
+$routes->match(['post','get'],'profile', 'UserController::profile', ['filter' => 'auth']);
+$routes->match(['post','get'],'password', 'UserController::password', ['filter' => 'auth']);
+$routes->get('dashboard', 'UserController::dashboard', ['filter' => 'auth']);
 
 // activities Page
 
@@ -52,7 +52,6 @@ $routes->get('dashboard', 'Users::dashboard', ['filter' => 'auth']);
 $routes->get('/', 'Main::index');
 $routes->get('/contact', 'Main::contact');
 $routes->get('/about', 'Main::about');
-
 
 
 

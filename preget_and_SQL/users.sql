@@ -9,7 +9,7 @@
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET time_zone = "+01:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -42,14 +42,6 @@ CREATE TABLE `users` (
   `updated_at` datetime DEFAULT current_timestamp(),
   `deleted_at` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `users`
---
-
-INSERT INTO `users` (`id`, `nom`, `prenom`, `pseudo`, `email`, `password`, `phone`, `birthday`, `taille`, `role`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(0, 'ESSERHANE', 'Farid', 'didouche', 'esserhane@mail.com', '$2y$10$NgtMGmbiiHLUpszZ0h7FHuHxh0a5QG5V4tn/k12cFckaNujZ3YIcC', '0750052821', NULL, '172', 'admin', '2022-08-27 08:32:21', '2022-08-27 08:32:21', '2022-08-27 15:32:21');
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
